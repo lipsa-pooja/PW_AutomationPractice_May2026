@@ -6,5 +6,10 @@
   "invalidUser": {
     "Username": "invalid_user",
     "Password": "wrong_password"
+  },
+   "checkoutUser": {
+    "firstName": "Lipsa",
+    "lastName": "Panda",
+    "postalCode": "522646"
   }
 }
