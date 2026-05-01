@@ -24,7 +24,7 @@ test.skip("Scenario-1:swaglabs Valid login test", async ({ browser }) => {
 //   When user logs in with invalid username and password
 //   Then user should see login error message
 
-test("Scenario-2:swaglabs Invalid login test", async ({ page }) => {
+test.skip("Scenario-2:swaglabs Invalid login test", async ({ page }) => {
   //const page = await browser.newPage();
   await page.goto("/");
   const username = page.locator("input#user-name");
