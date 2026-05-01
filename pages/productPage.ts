@@ -9,6 +9,8 @@ export class ProductPage
     private all_products:Locator;
     private cartBtn:Locator;
     private cartItem:Locator;
+    private burger_menu:Locator;
+    private logout_btn:Locator;
    
 
     constructor(page:Page)
@@ -18,6 +20,8 @@ export class ProductPage
    this.all_products = page.locator('[data-test="inventory-item"]');
     this.cartBtn=page.locator("[data-test='shopping-cart-link']");
     this.cartItem=page.locator("[data-test='item-quantity']")
+    this.burger_menu=page.locator("#react-burger-menu-btn");//react-burger-menu-btn
+    this.logout_btn=page.locator("#logout_sidebar_link");
       
     }
 
@@ -60,5 +64,12 @@ const product_count = await this.all_products.count();
   {
   
   await expect(this.cartItem).toHaveText("1");
+  }
+
+  async logoutApplication()
+  {
+    await this.burger_menu.click();
+    await this.logout_btn.click();
+
   }
 }

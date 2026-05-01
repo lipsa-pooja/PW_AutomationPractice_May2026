@@ -3,7 +3,14 @@
 import {test,expect} from '@playwright/test';
 import {loginpage} from '../pages/loginPage';
 import{ProductPage} from '../pages/productPage';
-import UserData from '../test-data/loginData.json';
+import UserData from '../test-data/userData.json';
+
+
+// Scenario 3: Add product to cart
+// Scenario: Verify user can add a product to cart
+//   Given user logs in to the application
+//   When user adds "Sauce Labs Backpack" to the cart
+//   Then cart count should be displayed as "1"
 
 test("Scenario-3:swaglabs Add Product to Cart  test", async ({ page }) => {
   

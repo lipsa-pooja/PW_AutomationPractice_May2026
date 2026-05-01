@@ -1,8 +1,14 @@
 import{ test, expect} from '@playwright/test'
 
 import{ loginpage} from '../pages/loginPage'
-import LoginData from '../test-data/loginData.json'
+import LoginData from '../test-data/userData.json'
 
+
+// Scenario 1: Valid user login
+// Scenario: Verify user can login with valid credentials
+//   Given user opens the SauceDemo application
+//   When user logs in with valid username and password
+//   Then user should land on the Products page
 test("Scenario-1: swaglabs Valid login test", async({page})=>
 {
 
@@ -19,6 +25,13 @@ console.log("valid password :"+LoginData.validUser.Password);
 });
 
 
+
+
+// Scenario 2: Invalid user login
+// Scenario: Verify error message for invalid login
+//   Given user opens the SauceDemo application
+//   When user logs in with invalid username and password
+//   Then user should see login error message
 test("Scenario-2: swaglabs InValid login test", async({page})=>
 {
 
@@ -37,3 +50,6 @@ console.log("invalid password :"+LoginData.invalidUser.Password);
     
 
 });
+
+
+
