@@ -24,9 +24,9 @@ test.skip("Scenario-1:swaglabs Valid login test", async ({ browser }) => {
 //   When user logs in with invalid username and password
 //   Then user should see login error message
 
-test.skip("Scenario-2:swaglabs Invalid login test", async ({ page }) => {
+test("Scenario-2:swaglabs Invalid login test", async ({ page }) => {
   //const page = await browser.newPage();
-  await page.goto("https://www.saucedemo.com/");
+  await page.goto("/");
   const username = page.locator("input#user-name");
   await username.fill("standard_user123");
 
@@ -48,9 +48,9 @@ test.skip("Scenario-2:swaglabs Invalid login test", async ({ page }) => {
 //   When user adds "Sauce Labs Backpack" to the cart
 //   Then cart count should be displayed as "1"
 
-test.skip("Scenario-3:swaglabs Add Product to Cart  test", async ({ browser }) => {
+test("Scenario-3:swaglabs Add Product to Cart  test", async ({ browser }) => {
   const page = await browser.newPage();
-  await page.goto("https://www.saucedemo.com/");
+  await page.goto("/");
   const username = page.locator("input#user-name");
   await username.fill("standard_user");
 
@@ -110,8 +110,8 @@ test.skip("Scenario-3:swaglabs Add Product to Cart  test", async ({ browser }) =
 //   And user completes the order
 //   Then order confirmation message should be displayed
 
-test.skip("Scenario-4:swaglabs User Checkout  test", async ({ page }) => {
-  await page.goto("https://www.saucedemo.com/");
+test("Scenario-4:swaglabs User Checkout  test", async ({ page }) => {
+  await page.goto("/");
   const username = page.locator("input#user-name");
   await username.fill("standard_user");
 
@@ -174,7 +174,7 @@ await expect(page.locator("[data-test='complete-header']")).toHaveText("Thank yo
 
 
 test("Scenario-5:swaglabs logout test", async ({ page }) => {
-  await page.goto("https://www.saucedemo.com/");
+  await page.goto("/");
   const username = page.locator("input#user-name");
   await username.fill("standard_user");
 
